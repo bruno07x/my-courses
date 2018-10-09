@@ -1,0 +1,253 @@
+/*Esse projeto esta sendo desenvolvido usando BEM CSS 
+BLOCK = .block
+ELEMENTE = .block-element
+MODIFIER = .block-elemente--modifier*/
+/*#################### BLOCK ####################  */
+body {
+	background-color: #F2F5F7;
+	font-family: 'Open Sans',Arial,sans-serif;
+}
+.flexboxHeader-container, .flexboxMain-container, .flexboxVideo-container, .flexboxFooter-container, .flexboxPatriocinadores-container {
+	width: 94%;
+	margin: 0 auto;
+}
+.flexboxHeader {
+	background-color: #FFF;
+	padding: 20px 0;
+}
+.flexboxMain {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.flexboxFooter {
+	background-color: #324C64;
+	padding-top: 20px;
+}
+.flexboxPatriocinadores {
+	margin-top: 30px;
+	background: #F2F5F7;
+	padding: 20px 0;
+}
+.flexboxPatriocinadores-container-form {
+	margin-top: 20px;
+	text-align: center;
+}
+.flexboxVideo {
+	background-color: #5E9EDC;
+	padding: 25px 0;
+
+}
+.flexboxVideo .flexboxVideo-container {
+	color: #FFF;
+}
+.flexboxVideo-container-sobre {
+	font-size: 1.3em;
+	line-height: 2;
+}
+/*#################### ELEMENT ####################  */
+.flexboxHeader-container-title {
+	font-weight: bold;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+.flexboxHeader-container-title a {
+	text-decoration: none;
+	color: inherit;
+}
+.flexboxHeader-container-nav-link {
+	padding: 10px;
+	margin-bottom: 10px;
+	color: #9799A6;
+	background-color: #FFF;
+	text-decoration: none;
+	transition: .5s;
+	display: block;
+	border-bottom: 1px solid #9799A6;
+}
+.flexboxMain-container-subtitulo {
+	font-weight: bold;
+	font-size: 32px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.flexboxMain-container-cursos-link {
+	height: 100px;
+	background-color: #FFF;
+	text-align: center;
+	margin: 1%;
+	transition: .3s;
+	box-shadow: 2px 2px 2px #CCC;
+	position: relative;
+}
+.flexboxMain-container-cursos-link a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.flexboxMain-container-cursos-link:hover {
+	box-shadow: 4px 4px 4px #CCC;
+}
+.flexboxMain-container-cursos-link a:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 10px auto;
+}
+.flexboxMain-container-cursos-link:nth-child(even) a:before {
+	background: url(../img/background1.svg) no-repeat;	
+}
+.flexboxMain-container-cursos-link:nth-child(odd) a:before {
+	background: url(../img/background2.svg) no-repeat;
+}
+.flexboxFooter-container-navMap-list-link {
+	text-decoration: none;
+	color: #FFF;
+	margin-top: 10px;
+}
+.flexboxFooter-container-navMap-list-link {
+	font-size: .9em;
+}
+.flexboxFooter-container-navMap-list-title {
+	font-weight: 700;
+	font-size: 1.3em;
+	margin: .9em 0;
+	padding-left: .3em;
+	padding-top: .2em;
+	padding-bottom: .2em;
+}
+.flexboxFooter-container-navMap-list-title + .flexboxFooter-container-navMap-list-link {
+	margin-top: 0;
+}
+.flexboxPatriocinadores-container-form label[for=email-contato] {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000;
+	margin-bottom: 5px;
+	display: block;
+}
+.flexboxPatriocinadores-container-form-fieldset-emailInput {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 10px;
+}
+.flexboxPatriocinadores-container-form-fieldset-submit {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #4DBA7A;
+	color: #FFF;
+	cursor: pointer;
+	
+}
+.flexboxPatriocinadores-container-form-fieldset-submit,
+.flexboxPatriocinadores-container-form-fieldset-emailInput {
+	outline: 0;
+	border: 1px solid #4DBA7A;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+.flexboxVideo-container-video {
+	max-width: 100%;
+}
+.flexboxVideo-container-sobre-title {
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+.flexboxVideo-container-sobre-button {
+	border-radius: 8px;
+	background-color: #ec6e5a;
+	display: block;
+	color: #FFF;
+	border: none;
+	height: 50px;
+	font-size: .8em;
+	outline: none;
+}
+.flexboxPatriocinadores-container-form-legend {
+	margin-bottom: 10px;
+}
+/*#################### MODIFIER ####################  */
+.flexboxFooter-container-navMap-list-title--bancoDeDados { color: #EC6E5A; border-left: 4px solid #EC6E5A; }
+.flexboxFooter-container-navMap-list-title--framework { color: #AD85BF; border-left: 4px solid #AD85BF; }
+.flexboxFooter-container-navMap-list-title--frontend { color: #5EC6F3; border-left: 4px solid #5EC6F3; }
+.flexboxFooter-container-navMap-list-title--backend { color: #25D285; border-left: 4px solid #25D285; }
+.flexboxFooter .flexboxFooter-container-navMap-subtitulo {color: #FFF;}
+
+/* NOTE: #################### INICIO :: MEDIA QUERY 769px ####################  */
+@media(min-width: 769px){
+/*#################### BLOCK ####################  */
+.flexboxHeader-container, .flexboxMain-container, .flexboxVideo-container, .flexboxFooter-container, .flexboxPatriocinadores-container {
+	width: 85%;	
+}
+.flexboxHeader-container-nav {
+	width: auto;
+}
+.flexboxPatriocinadores-container-form {
+	margin-top: 0;
+	text-align: left;
+}
+/*#################### ELEMENT ####################  */
+.flexboxFooter-container-navMap-subtitulo, .flexboxMain-container-subtitulo {
+	text-align: left;
+}
+.flexboxFooter-container-navMap-subtitulo, .flexboxMain-container-subtitulo {
+	text-align: left;
+}
+.flexboxHeader-container-nav-link {
+	border-radius: 5px;
+	border: 1px solid #9799A6;
+}
+.flexboxHeader-container-nav-link:hover {
+	color: #FFF;
+	background-color: #9799A6;
+}
+.flexboxHeader-container-title {
+	margin: 0;
+}
+.flexboxHeader-container-nav-link {
+	width: auto;
+	margin: 0 0 0 10px;
+}
+.flexboxMain-container-cursos-link:nth-child(3n) {
+	margin-right: 0;
+}
+.flexboxMain-container-cursos-link:nth-child(3n+1) {
+	margin-left: 0;
+}
+/*#################### MODIFIER ####################  */
+}
+/* NOTE: #################### FIM :: MEDIA QUERY 769px ####################  */
+
+/* NOTE: #################### INICIO :: MEDIA QUERY 1000px ####################  */
+@media(min-width: 1000px){
+/*#################### BLOCK ####################  */
+.flexboxVideo-container-sobre {
+	margin-left: 1.5em;
+}
+/*#################### ELEMENT ####################  */
+.flexboxMain-container-cursos-link {
+	margin: 1.333%;
+}
+.flexboxMain-container-cursos-link:nth-child(3n) {
+	margin-right: 1.33%;
+}
+.flexboxMain-container-cursos-link:nth-child(3n+1) {
+	margin-left: 1.333%;
+}
+.flexboxMain-container-cursos-link:nth-child(4n) {
+	margin-right: 0;
+}
+.flexboxMain-container-cursos-link:nth-child(4n+1) {
+	margin-left: 0;
+}
+/*#################### MODIFIER ####################  */
+}
+/* NOTE: #################### FIM :: MEDIA QUERY 1000px ####################  */
+
+

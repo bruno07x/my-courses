@@ -1,0 +1,32 @@
+/*Esse projeto esta sendo desenvolvido usando BEM CSS 
+BLOCK = .block
+ELEMENTE = .block-element
+MODIFIER = .block-elemente--modifier*/
+/*#################### BLOCK ####################  */
+.flexboxPatriocinadores-container, .flexboxHeader-container, .flexboxPatriocinadores-container-list, .flexboxPatriocinadores-container-form-fieldset, .flexboxHeader-container-nav, .flexboxFooter-container-navMap-list{
+    display: flex;
+}
+.flexboxHeader-container{
+    /* Alinha itens dentro do bloco pai*/
+    align-items: center;
+    /* Alinha o conteudo inteiro do bloco entre o espaco vázio*/
+    justify-content: space-between;
+}
+.flexboxPatriocinadores-container{
+    /* Alinha o conteudo inteiro do bloco entre o espaco vázio*/
+    justify-content: space-between;
+}
+.flexboxFooter-container-navMap-list{
+    /* NOTE: Altera a direcao do flex para colunas */
+    flex-direction: column;
+    /* NOTE: Coloca os itens lado a lado apos atingir o maximo de altura (height) */
+    flex-wrap: wrap;
+    height: 250px;
+}
+.flexboxPatriocinadores-container-list{
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+/*#################### ELEMENTE ####################  */
+/*#################### MODIFIER ####################  */
