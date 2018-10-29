@@ -2,10 +2,8 @@
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 botaoAdicionar.addEventListener("click", function(event) {
     event.preventDefault();
-
     var form = document.querySelector("#form-adiciona");
     var paciente = obtemPacienteDoFormulario(form);
-    var pacienteTr = montaTr(paciente);
     var erro = validaPaciente(paciente);
     // NOTE: Verifica se há algum erro
     // Se erro maior que 0 ira ser exibido e saira imediatamente da funcao
@@ -18,10 +16,7 @@ botaoAdicionar.addEventListener("click", function(event) {
         // NOTE: Usando "return" sem um dado, sai imediatamente da funcao caso o paciente seja
         return;
     }
-
-    // NOTE: Adicionando paciente na tabela
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
+    addPacienteTabela(paciente);
     form.reset();
     var mensagemErro = document.querySelector("#mensagensErro");
     mensagemErro.innerHTML = "";
@@ -42,6 +37,13 @@ function obtemPacienteDoFormulario(form) {
         imc: calculaImc(form.peso.value, form.altura.value)
     }
     return paciente;
+}
+function addPacienteTabela(paciente){
+    var pacienteTr = montaTr(paciente);
+    console.log(pacienteTr);
+    // NOTE: Adicionando paciente na tabela
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 }
 
 // NOTE: Monta a linha da tabela
